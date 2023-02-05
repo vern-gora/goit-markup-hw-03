@@ -1,5 +1,42 @@
 /* ---------- GENERAL ---------- */
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+address {
+  font-style: normal;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
+  border: 2px solid red;
+}
+
 :root {
   --main-title-color: #ffffff;
   --primary-brand-color: #4d5ae5;
@@ -18,7 +55,7 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-.hidden {
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -51,19 +88,31 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
+  border-radius: 4px;
   cursor: pointer;
 }
 /* ------------------------ MAIN PAGE ------------------------ */
 /* ---------- HEADER ---------- */
 
 .header {
+  padding-top: 24px;
+  padding-bottom: 24px;
   background: #ffffff;
 }
 
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
 .header-navigation {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
 }
 
 .header-logo {
+  margin-right: 76px;
   font-family: 'Raleway';
   font-weight: 800;
   font-size: 18px;
@@ -75,6 +124,8 @@ body {
 }
 
 .header-list {
+  display: flex;
+  gap: 40px;
 }
 .header-item {
 }
@@ -90,24 +141,33 @@ body {
 .header-adress {
 }
 .adress-list {
+  display: flex;
+  gap: 40px;
 }
 
 .adress-mail,
 .adress-tel {
-  font-style: normal;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.02em;
   color: var(--text-color);
 }
 
-/* ---------- ORDER ---------- */
+/* ---------- HERO ---------- */
 
-.order {
+.hero {
   background: var(--dark-color);
 }
 
-.order-title {
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 188px 317px;
+}
+
+.hero-title {
+  margin-bottom: 48px;
   font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
@@ -116,35 +176,44 @@ body {
   color: #ffffff;
 }
 
-.order-btn {
+.hero-btn {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  align-items: center;
   letter-spacing: 0.04em;
   color: #ffffff;
+  width: 169px;
+  height: 56px;
   background: var(--primary-brand-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  border: none;
 }
 
-.order-btn:hover,
-.order-btn:focus {
+.hero-btn:hover,
+.hero-btn:focus {
   background: var(--pressed-state-color);
 }
 
 /* ---------- ABOUT ---------- */
 
 .about {
+  padding-top: 120px;
+  padding-bottom: 120px;
   background: #ffffff;
 }
 
 .about-list {
+  display: flex;
+  gap: 24px;
 }
 .about-item {
+  width: 264px;
+  height: 104px;
 }
 
 .about-title {
+  margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -162,9 +231,11 @@ body {
 /* ---------- ABILITY ---------- */
 
 .ability {
+  padding-bottom: 120px;
   background: #ffffff;
 }
 .ability-title {
+  margin-bottom: 72px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
@@ -174,6 +245,8 @@ body {
   color: var(--dark-color);
 }
 .ability-list {
+  display: flex;
+  gap: 24px;
 }
 
 .ability-item {
@@ -182,10 +255,13 @@ body {
 /* ---------- TEAM ---------- */
 
 .team {
+  padding-top: 120px;
+  padding-bottom: 120px;
   background: var(--light-color);
 }
 
 .team-title {
+  margin-bottom: 72px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
@@ -196,11 +272,23 @@ body {
 }
 
 .team-list {
+  display: flex;
+  gap: 24px;
 }
+
 .team-item {
+  background: #ffffff;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-person {
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .team-pre-title {
+  margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -220,9 +308,18 @@ body {
 /* ---------- FOOTER ---------- */
 
 .footer {
+  padding-top: 100px;
+  padding-bottom: 100px;
   background: var(--dark-color);
 }
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .footer-logo {
+  padding-bottom: 16px;
   font-family: 'Raleway';
   font-weight: 800;
   font-size: 18px;
@@ -234,6 +331,7 @@ body {
 }
 
 .footer-text {
+  max-width: 264px;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
