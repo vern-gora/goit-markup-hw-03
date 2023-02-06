@@ -34,7 +34,6 @@ img {
   max-width: 1158px;
   padding: 0 15px;
   margin: 0 auto;
-  border: 2px solid red;
 }
 
 :root {
@@ -95,9 +94,10 @@ body {
 /* ---------- HEADER ---------- */
 
 .header {
+  border: 1px solid var(--subtle-text-color);
   padding-top: 24px;
   padding-bottom: 24px;
-  background: #ffffff;
+  background: var(--main-title-color);
 }
 
 .header-container {
@@ -173,7 +173,7 @@ body {
   line-height: 1.07;
   text-align: center;
   letter-spacing: 0.02em;
-  color: #ffffff;
+  color: var(--main-title-color);
 }
 
 .hero-btn {
@@ -181,7 +181,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  color: #ffffff;
+  color: var(--main-title-color);
   width: 169px;
   height: 56px;
   background: var(--primary-brand-color);
@@ -200,7 +200,7 @@ body {
 .about {
   padding-top: 120px;
   padding-bottom: 120px;
-  background: #ffffff;
+  background: var(--main-title-color);
 }
 
 .about-list {
@@ -232,7 +232,7 @@ body {
 
 .ability {
   padding-bottom: 120px;
-  background: #ffffff;
+  background: var(--main-title-color);
 }
 .ability-title {
   margin-bottom: 72px;
@@ -277,7 +277,7 @@ body {
 }
 
 .team-item {
-  background: #ffffff;
+  background: var(--main-title-color);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
 }
@@ -340,12 +340,26 @@ body {
 
 /* ------------------------ PORTFOLIO ------------------------ */
 
+.portfolio {
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
+
+.portfolio-btn-wrap {
+  margin-bottom: 72px;
+}
+
 .portfolio-filter-list {
+  display: flex;
+  justify-content: center;
+  padding: 0px;
+  gap: 24px;
 }
 .portfolio-filter-item {
 }
 
 .portfolio-btn {
+  padding: 12px 24px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -355,21 +369,38 @@ body {
   color: var(--primary-brand-color);
   background: var(--light-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  border: 1px solid var(--accent-color);
   border-radius: 4px;
 }
 
 .portfolio-btn:hover,
 .portfolio-btn:focus {
-  color: #ffffff;
+  color: var(--main-title-color);
   background: var(--pressed-state-color);
+  border-radius: 4px;
 }
 
+.portfolio-project-container {
+}
 .portfolio-project-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 48px;
 }
 .portfolio-project-item {
+  width: calc((100% - 48px) / 3);
+}
+.portfolio-project-wrap {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 16px;
+  border: 1px solid var(--accent-color);
+  border-top: none;
 }
 
 .portfolio-project-title {
+  margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
